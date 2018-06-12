@@ -7,19 +7,43 @@
 //
 
 import UIKit
+import GoogleAPIClientForREST
+import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
+    
+    private let service = GTLRSheetsService()
+    let signInButton = GIDSignInButton()
+    var searchViewController: SearchViewController?
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            showAlert(vc: self, title: "Authentication Error", message: error.localizedDescription)
+            self.service.authorizer = nil
+        } else {
+            self.signInButton.isHidden = true
+            self.service.authorizer = user.authentication.fetcherAuthorizer()
+            self.searchViewController = (self.storyboard?.instantiateViewController(withIdentifier: "searchName") as! SearchViewController)
+            present(searchViewController!, animated: true)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Configure Google Sign-in.
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().scopes = scopes
+        GIDSignIn.sharedInstance().signInSilently()
+        
+        // Add the sign-in button
+        signInButton.frame = CGRect(x: 0, y: 300, width: 300, height: 48)
+        signInButton.center = view.center
+        signInButton.style = GIDSignInButtonStyle.wide
+        view.addSubview(signInButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78C2137E93306954D5B996DF /* Pods_OrenchukTask2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74890931C1BD1DEDA009BDE9 /* Pods_OrenchukTask2.framework */; };
+		C12DB73820CFBD4B00931651 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DB73720CFBD4B00931651 /* SearchViewController.swift */; };
+		C12DB73A20CFC22100931651 /* ParsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DB73920CFC22100931651 /* ParsedViewController.swift */; };
+		C12DB73C20CFCEB100931651 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DB73B20CFCEB100931651 /* ShowAlert.swift */; };
 		C1BF8BCA20CEB8D900D744A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF8BC920CEB8D900D744A7 /* AppDelegate.swift */; };
 		C1BF8BCC20CEB8D900D744A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF8BCB20CEB8D900D744A7 /* ViewController.swift */; };
 		C1BF8BCF20CEB8D900D744A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF8BCD20CEB8D900D744A7 /* Main.storyboard */; };
@@ -15,6 +19,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		178CF51F4FCC0B3009528359 /* Pods-OrenchukTask2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenchukTask2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2.debug.xcconfig"; sourceTree = "<group>"; };
+		74890931C1BD1DEDA009BDE9 /* Pods_OrenchukTask2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrenchukTask2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CD35F2AB57C9AF1A6F9C29 /* Pods-OrenchukTask2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenchukTask2.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2.release.xcconfig"; sourceTree = "<group>"; };
+		C12DB73320CF289300931651 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		C12DB73420CF289300931651 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C12DB73520CF289900931651 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		C12DB73620CF289900931651 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C12DB73720CFBD4B00931651 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C12DB73920CFC22100931651 /* ParsedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedViewController.swift; sourceTree = "<group>"; };
+		C12DB73B20CFCEB100931651 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
 		C1BF8BC620CEB8D900D744A7 /* OrenchukTask2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrenchukTask2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BF8BC920CEB8D900D744A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1BF8BCB20CEB8D900D744A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C2137E93306954D5B996DF /* Pods_OrenchukTask2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BE259DA819721CD15B7438B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				178CF51F4FCC0B3009528359 /* Pods-OrenchukTask2.debug.xcconfig */,
+				88CD35F2AB57C9AF1A6F9C29 /* Pods-OrenchukTask2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C1BF8BBD20CEB8D800D744A7 = {
 			isa = PBXGroup;
 			children = (
 				C1BF8BC820CEB8D900D744A7 /* OrenchukTask2 */,
 				C1BF8BC720CEB8D900D744A7 /* Products */,
+				9BE259DA819721CD15B7438B /* Pods */,
+				D8E8ED2F48AB8CF278C747FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +82,23 @@
 			children = (
 				C1BF8BC920CEB8D900D744A7 /* AppDelegate.swift */,
 				C1BF8BCB20CEB8D900D744A7 /* ViewController.swift */,
+				C12DB73720CFBD4B00931651 /* SearchViewController.swift */,
+				C12DB73920CFC22100931651 /* ParsedViewController.swift */,
+				C12DB73B20CFCEB100931651 /* ShowAlert.swift */,
 				C1BF8BCD20CEB8D900D744A7 /* Main.storyboard */,
 				C1BF8BD020CEB8DA00D744A7 /* Assets.xcassets */,
 				C1BF8BD220CEB8DA00D744A7 /* LaunchScreen.storyboard */,
 				C1BF8BD520CEB8DA00D744A7 /* Info.plist */,
 			);
 			path = OrenchukTask2;
+			sourceTree = "<group>";
+		};
+		D8E8ED2F48AB8CF278C747FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74890931C1BD1DEDA009BDE9 /* Pods_OrenchukTask2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1BF8BD820CEB8DA00D744A7 /* Build configuration list for PBXNativeTarget "OrenchukTask2" */;
 			buildPhases = (
+				62CE014136F120C79CD934A6 /* [CP] Check Pods Manifest.lock */,
 				C1BF8BC220CEB8D900D744A7 /* Sources */,
 				C1BF8BC320CEB8D900D744A7 /* Frameworks */,
 				C1BF8BC420CEB8D900D744A7 /* Resources */,
+				2AEF9F6EA7DA851BC0491E0A /* [CP] Embed Pods Frameworks */,
+				89B72F951808DD174FF0F4F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +170,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AEF9F6EA7DA851BC0491E0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62CE014136F120C79CD934A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrenchukTask2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89B72F951808DD174FF0F4F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrenchukTask2/Pods-OrenchukTask2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1BF8BC220CEB8D900D744A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12DB73C20CFCEB100931651 /* ShowAlert.swift in Sources */,
 				C1BF8BCC20CEB8D900D744A7 /* ViewController.swift in Sources */,
 				C1BF8BCA20CEB8D900D744A7 /* AppDelegate.swift in Sources */,
+				C12DB73820CFBD4B00931651 /* SearchViewController.swift in Sources */,
+				C12DB73A20CFC22100931651 /* ParsedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +253,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1BF8BCE20CEB8D900D744A7 /* Base */,
+				C12DB73320CF289300931651 /* ru */,
+				C12DB73520CF289900931651 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -155,6 +263,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1BF8BD320CEB8DA00D744A7 /* Base */,
+				C12DB73420CF289300931651 /* ru */,
+				C12DB73620CF289900931651 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -226,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -278,6 +390,7 @@
 		};
 		C1BF8BD920CEB8DA00D744A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178CF51F4FCC0B3009528359 /* Pods-OrenchukTask2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +409,7 @@
 		};
 		C1BF8BDA20CEB8DA00D744A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CD35F2AB57C9AF1A6F9C29 /* Pods-OrenchukTask2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
