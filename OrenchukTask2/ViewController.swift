@@ -16,7 +16,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     private let service = GTLRSheetsService()
     let signInButton = GIDSignInButton()
-    var searchViewController: SearchViewController?
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -25,8 +24,14 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         } else {
             self.signInButton.isHidden = true
             self.service.authorizer = user.authentication.fetcherAuthorizer()
-            self.searchViewController = (self.storyboard?.instantiateViewController(withIdentifier: "searchName") as! SearchViewController)
-            present(searchViewController!, animated: true)
+            
+            if let vc = (self.storyboard?.instantiateViewController(withIdentifier: "searchName") as? SearchViewController) {
+                vc.service = service
+                vc.scopes = scopes
+                present(vc, animated: true)
+            } else {
+                showAlert(vc: self, title: "Search problem", message: "")
+            }
         }
     }
 
